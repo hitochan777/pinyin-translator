@@ -52,7 +52,7 @@ func main() {
 
 	quit := make(chan os.Signal, 1)
 	signal.Notify(quit, syscall.SIGTERM, os.Interrupt)
-	sig := <- quit 
+	sig := <-quit
 	log.Printf("SIGNAL %d received, then shutting down...\n", sig)
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)

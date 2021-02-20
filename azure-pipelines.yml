@@ -28,4 +28,4 @@ stages:
         tags: |
           $(tag)
     - publish: '$(Build.ArtifactStagingDirectory)'
-      artifactName: 'docker-image'
+      artifact: docker-image

@@ -27,3 +27,5 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/server/Dockerfile'
         tags: |
           $(tag)
+    - publish: '$(Build.ArtifactStagingDirectory)'
+      articaftName: 'docker-image'

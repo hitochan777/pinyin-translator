@@ -37,11 +37,17 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:latest
             ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:${{ steps.tag.outputs.result }}
+
       - uses: azure/docker-login@v1
         with:
           login-server: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+      - name: 'Login via Azure CLI'
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - uses: azure/webapps-deploy@v2
         with:

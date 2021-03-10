@@ -23,7 +23,7 @@ func (r *Router) handler(writer http.ResponseWriter, reader *http.Request) {
 		writer.WriteHeader(http.StatusBadRequest)
 		return
 	}
-	fmt.Fprintf(writer, "%s", cedict.PinyinTones(r.dict.HanziToPinyin(hanzi)))
+	fmt.Fprintf(writer, "%s\n", cedict.PinyinTones(r.dict.HanziToPinyin(hanzi)))
 }
 
 func NewServer(port string) *http.Server {

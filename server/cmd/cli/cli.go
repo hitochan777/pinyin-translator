@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"log"
 	"os"
@@ -49,7 +50,9 @@ func main() {
 		log.Fatalln("Unexpected error while loading dictionary")
 		return
 	}
-	var input string
-	fmt.Scanln(&input)
-	fmt.Printf("%s", cedict.PinyinTones(dict.HanziToPinyin(input)))
+	scanner := bufio.NewScanner(os.Stdin)
+	for scanner.Scan() {
+		line := scanner.Text()
+		fmt.Printf("%s\n", cedict.PinyinTones(dict.HanziToPinyin(line)))
+	}
 }

@@ -24,12 +24,10 @@ func createCacheDirIfNotExists() (string, error) {
 }
 
 func loadDict() (*cedict.Dict, error) {
-	log.Println("Loading dictionary")
 	cacheDir, err := createCacheDirIfNotExists()
 	if err != nil {
 		return nil, err
 	}
-	log.Println("Loaded dictionary")
 	cacheFile := path.Join(cacheDir, "dict.gz")
 	var dict *cedict.Dict
 	if _, err := os.Stat(cacheFile); os.IsNotExist(err) {

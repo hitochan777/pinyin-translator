@@ -1,3 +1,5 @@
+github.com/hitochan777-misc/cedict v1.0.1-0.20210717101349-231395985baa h1:y5cvSZMgpZuQCvWBUshtvr7+N6esBU8VG40KjNhby+M=
+github.com/hitochan777-misc/cedict v1.0.1-0.20210717101349-231395985baa/go.mod h1:CxO2zLJDnkg6FI8U3Z9odKpNF5tiaLtNtdb3Ks9kDxs=
 github.com/jcramb/cedict v1.0.0 h1:XZKfWFIAZazuMpsyhyR5xPx+VERcYGDkWiDPl2PYhWU=
 github.com/jcramb/cedict v1.0.0/go.mod h1:CxO2zLJDnkg6FI8U3Z9odKpNF5tiaLtNtdb3Ks9kDxs=
 github.com/jcramb/cedict v1.0.1-0.20210401151953-11305676af34 h1:dFm6Zf2Aq8ha75hSRU9fxlZPaCYBElq+wT9+EphqCHw=
